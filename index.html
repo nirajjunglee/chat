@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat Statistics</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div class="form">
+            <h1>
+                View Tag Statistics
+            </h1>
+            <div class="form-group">
+                <label for="">From Date: </label>
+                <input id="startDate" type="text" class="form-control" name="s_date" placeholder="Enter Start Date"
+                    autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="">To Date: </label>
+                <input type="text" id="endDate" name="e_date" class="form-control" placeholder="Enter End Date"
+                    autocomplete="off" />
+            </div>
+            <input type="button" value='Get Data' id="save" class="btn btn-info">&nbsp;&nbsp; <input type="button" value='Get CSV' id="CSV" class="btn btn-info">
+
+        </div>
+        <div id="loader"></div>
+        <div id="test">
+            <!-- Search: <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> -->
+            <br />
+            <table class="table-sm table table-bordered table-hover" id="entry-list">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Tags</th>
+                        <th># of Chats</th>
+                        <th># of Missed_Chats</th>
+                    </tr>
+                <tbody>
+                </tbody>
+                </thead>
+            </table>
+        </div>
+        <script src="script/script.js"></script>
+    </div>
+    <script src="script/table2CSV.js"></script>
+</body>
+
+</html>
